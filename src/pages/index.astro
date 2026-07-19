@@ -1,17 +1,26 @@
 ---
-
+const nombre = 'Alejandro'
+const profesion = 'Estudiante de INgeniería del Software'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tarjeta de Presentación</title>
+  </head>
+  <body>
+    <main class="tarjeta">
+      <h1>Hola, soy {nombre}</h1>
+      <p>{profesion}</p>
+    </main>
+  </body>
 </html>
+
+<style>
+  .tarjeta {
+    background: #1a1a1a;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+</style>
