@@ -1,28 +1,60 @@
 ---
 const nombre = 'Alejandro'
-const profesion = 'Estudiante de INgeniería del Software'
+const profesion = 'Estudiante de Ingeniería del Software'
 ---
 
 <html lang="es">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tarjeta de Presentación</title>
   </head>
   <body>
-    <main class="tarjeta">
-      <h1>Hola, soy {nombre}</h1>
-      <p>{profesion}</p>
+    <main class="container">
+      <div class="tarjeta">
+        <h1>Hola, soy {nombre}</h1>
+        <p>{profesion}</p>
+      </div>
     </main>
   </body>
 </html>
 
-<style>
-  .tarjeta {
-    color: white;
-    padding: 3rem;
-    border-radius: 8px;
+<style is:global>
+  /* El is:global asegura que el fondo negro afecte a TODA la pantalla */
+  body {
+    background-color: #0f172a; /* Un tono oscuro tirando a azulado muy elegante */
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #f8fafc;
   }
-  body{
-	background-color: black;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .tarjeta {
+    background-color: #1e293b; /* Un gris oscuro para que resalte sobre el fondo */
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid #334155;
+  }
+
+  h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 1.2rem;
   }
 </style>
