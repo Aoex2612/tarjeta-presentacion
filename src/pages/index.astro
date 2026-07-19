@@ -1,5 +1,5 @@
 ---
-const nombre = 'Alejandro';
+const nombre = 'Alejandro Jesús Ortiz Zamora';
 const profesion = 'Estudiante de Ingeniería del Software';
 ---
 
@@ -12,16 +12,24 @@ const profesion = 'Estudiante de Ingeniería del Software';
   <body>
     <main class="container">
       <div class="tarjeta">
-        <h1>Hola, soy {nombre}</h1>
+		<div class="avatar-container">
+          <img src=src/profile.png alt={`Foto de ${nombre}`} class="avatar" />
+        </div>
+        <h1>{nombre}</h1>
         <p>{profesion}</p>
+		<h2>>sudo pacman -S alejandro-web</h2>
+		<div class="resumen">
+          <p>
+            Apasionado por el desarrollo de software, los sistemas y el despliegue autohospedado. 
+            Me enfoco en crear soluciones eficientes tanto en el frontend como gestionando mis propios entornos y servidores domésticos.
+          </p>
+        </div>
       </div>
-
-	  	<h2>sudo pacman -S alejandro-web</h2>
     </main>
   </body>
 </html>
 
-<style>
+<style is:global>
   body {
     background-color: #0f172a;
     margin: 0;
@@ -31,15 +39,28 @@ const profesion = 'Estudiante de Ingeniería del Software';
   .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; 
     min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
   }
   .tarjeta {
     background-color: #1e293b;
     padding: 3rem;
-    border-radius: 12px;
+    border-radius: 0; 
     text-align: center;
-    border: 1px solid #334155;
+    border-right: 1px solid #334155;
+    border-left: 1px solid #334155;
+    border-top: none;
+    border-bottom: none;
+    
+    max-width: 500px; 
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
   }
   h1 {
     margin: 0 0 0.5rem 0;
@@ -56,7 +77,7 @@ const profesion = 'Estudiante de Ingeniería del Software';
 	font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
     background-color: #090d16; 
     color: #4ade80; 
-    padding: 0.6rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 6px;
     font-size: 1.1rem;
     font-weight: 500;
@@ -64,5 +85,13 @@ const profesion = 'Estudiante de Ingeniería del Software';
     margin-top: 1.5rem;
     border: 1px solid #1e293b;
     letter-spacing: 0.05em;
+  }
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1e293b;
+    background-color: #090d16;
   }
 </style>
